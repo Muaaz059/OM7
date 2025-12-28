@@ -1,0 +1,339 @@
+/* LOGO خارج الـ NAV */
+.site-logo {
+  position: fixed;
+  top: 20px;
+  left: 30px;
+  z-index: 1000;
+}
+
+.site-logo .logo {
+  height: 120px;
+  width: auto;
+  transition: 0.3s ease;
+}
+
+/* Dark mode */
+body.dark .site-logo .logo {
+  content: url("logo-dark.png");
+}
+
+/* ==================================================
+   1. RESET + BASE
+================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Segoe UI', sans-serif;
+   transition: background 0.4s ease, color 0.4s ease;
+  min-height: 100vh;
+}
+
+body:not(.dark) {
+  background-image: url(https://img.freepik.com/free-vector/abstract-modern-curved-white-background_84443-55341.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+body.scrolled nav {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.dark-toggle {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+/* ==================================================
+   2. DESIGN TOKENS (VARIABLES)
+================================================== */
+:root {
+  --color-bg: #ffffff;
+  --color-primary: #000;
+  --color-secondary: #004ddd;
+  --color-text: #222;
+  --color-glass: rgba(255,255,255,0.25);
+
+  --radius-lg: 30px;
+  --radius-md: 20px;
+  --transition: 0.3s ease;
+}
+
+body.dark {
+  --color-bg: #0f0f0f;
+  --color-primary: #ffffff;
+  --color-secondary: #4da3ff;
+  --color-text: #f1f1f1;
+  --color-glass: rgba(0,0,0,0.6);
+}
+
+body.dark nav {
+  background: rgba(15,15,15,0.85);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+body.dark .footer {
+  background: rgba(0,0,0,0.7);
+}
+
+/* ==================================================
+   3. NAVBAR
+================================================== */
+nav {
+  position: fixed;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  padding: 1rem;
+  transition: box-shadow 0.3s ease;
+  background: var(--color-glass);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255,255,255,0.5);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  z-index: 100;
+}
+
+/* اللينكات في المنتصف */
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 500;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--color-text);
+  transition: var(--transition);
+}
+
+nav a:hover::after,
+nav a.active::after {
+  width: 100%;
+  left: 0;
+}
+
+nav a.active {
+  color: var(--color-secondary);
+  font-weight: 700;
+}
+
+/* ==================================================
+   4. BUTTON SYSTEM
+================================================== */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.btn.primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+body.dark .btn.primary {
+  background: #ffffff;
+  color: #000;
+}
+
+/* ==================================================
+   5. ANIMATIONS
+================================================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==================================================
+   FOOTER
+================================================== */
+.footer {
+  margin-top: 6rem;
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(12px);
+  padding: 4rem 2rem 2rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 3rem;
+}
+
+/* ==================================================
+   MOBILE NAVBAR
+================================================== */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+/* ==================================================
+   DARK MODE BUTTON (Uiverse)
+   → NUR HINZUGEFÜGT
+================================================== */
+.darkThemeBtn * {
+  transition: all 0.3s;
+}
+
+.darkThemeBtn input {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.darkThemeBtn input:checked + label svg {
+  transform: rotate(180deg);
+}
+
+.darkThemeBtn label {
+  border: 1px solid #efefef;
+  background: rgba(239, 239, 239, 0.5);
+  border-radius: 10px;
+  height: 46px;
+  width: 46px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.darkThemeBtn label svg {
+  position: absolute;
+  width: 18px;
+  transition: 0.3s;
+  z-index: 1;
+  fill: #000;
+}
+
+.darkThemeBtn label svg.sun {
+  opacity: 0;
+  fill: #fff;
+}
+
+.darkThemeBtn label svg.moon {
+  opacity: 1;
+}
+
+.darkThemeBtn input:checked + label {
+  background: #4a6cf7;
+}
+
+.darkThemeBtn input:checked + label svg.sun {
+  opacity: 1;
+}
+
+.darkThemeBtn input:checked + label svg.moon {
+  opacity: 0;
+}
+
+/* زر الدارك داخل النافبار تمامًا */
+.darkThemeBtn {
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+}
+
+.darkThemeBtn label:hover {
+  box-shadow: 0 0 12px rgba(77, 163, 255, 0.6);
+}
+
+/* RTL */
+html[dir="rtl"] .darkThemeBtn {
+  left: 24px;
+  right: auto;
+}
+
+@media (max-width: 768px) {
+
+  nav {
+    width: 95%;
+    padding: 1rem 1.5rem;display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 70px;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 200;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    background: var(--color-glass);
+    backdrop-filter: blur(12px);
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem 0;
+    border-radius: 0 0 25px 25px;
+
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: 0.3s ease;
+  }
+
+  .nav-links.open {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .nav-links li {
+    text-align: center;
+  }
+}
