@@ -97,7 +97,7 @@ nav a {
     margin-bottom: 0.6rem;
 }
 
-/* IMAGES – PC */
+/* IMAGES – PC (الأساس) */
 .service-images {
     flex: 1;
     display: grid;
@@ -112,6 +112,12 @@ nav a {
     border-radius: 25px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.25);
     display: block;
+}
+
+/* ✅ FULL STACK – نفس حجم الصور العلوية */
+.same-size img {
+    height: 320px;
+    object-fit: cover;
 }
 
 /* BUTTON */
@@ -141,7 +147,7 @@ nav a {
 }
 
 /* =========================
-   MOBILE (FINAL & CLEAN)
+   MOBILE (نظيف وبدون تصغير)
    ========================= */
 @media (max-width: 768px) {
 
@@ -153,8 +159,9 @@ nav a {
         grid-template-columns: 1fr;
     }
 
-    .service-images img {
-        height: auto;
-        object-fit: contain;
+    .service-images img,
+    .same-size img {
+        height: 260px;       /* نفس الحجم للجميع */
+        object-fit: cover;   /* لا تصغير */
     }
 }
