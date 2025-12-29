@@ -149,3 +149,14 @@ nav a {
         height: 260px;
     }
 }
+@media (max-width: 768px) {
+  .service-images {
+    grid-template-columns: 1fr;
+  }
+
+  .service-images img {
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+  }
+}
