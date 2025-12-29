@@ -140,23 +140,11 @@ nav a {
 }
 
 /* MOBILE */
-@media (max-width: 768px) {
-    .service-section {
-        flex-direction: column;
-    }
 
-    .service-images img {
-        height: 260px;
-    }
-}
-@media (max-width: 768px) {
-  .service-images {
-    grid-template-columns: 1fr;
-  }
-
+ @media (max-width: 768px) {
   .service-images img {
-    height: auto;
-    max-height: none;
-    object-fit: contain;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: contain !important;
   }
 }
