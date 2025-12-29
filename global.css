@@ -407,3 +407,15 @@ html[dir="rtl"] .darkThemeBtn {
     z-index: 2;
   }
 }
+
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 180px; /* يفتح مساحة للفوتر */
+  }
+}
+@media (max-width: 768px) {
+  .footer {
+    display: block;
+    visibility: visible;
+  }
+}
