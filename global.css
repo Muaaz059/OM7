@@ -369,13 +369,17 @@ html[dir="rtl"] .darkThemeBtn {
   transform: scale(1.12);
 }
 
-/* FOOTER LINKS FIX */
-.footer .nav-links {
+/* FOOTER FIX */
+.footer ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer .nav-links {
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
-  padding: 0;
 }
 
 .footer .nav-links li {
@@ -386,7 +390,6 @@ html[dir="rtl"] .darkThemeBtn {
   color: var(--color-text);
   text-decoration: none;
   font-weight: 500;
-  transition: 0.3s;
 }
 
 .footer .nav-links a:hover {
