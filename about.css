@@ -161,3 +161,11 @@ nav a:hover::after {
   backdrop-filter: blur(10px);
   font-weight: 500;
 }
+
+@media (max-width: 768px) {
+  .service-images img,
+  .project img {
+    height: auto;
+    object-fit: contain;
+  }
+}
