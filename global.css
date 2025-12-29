@@ -419,3 +419,12 @@ html[dir="rtl"] .darkThemeBtn {
     visibility: visible;
   }
 }
+@media (max-width: 768px) {
+  .footer .nav-links {
+    display: flex !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: none !important;
+    position: static !important;
+  }
+}
