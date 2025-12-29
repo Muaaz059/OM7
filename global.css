@@ -369,3 +369,26 @@ html[dir="rtl"] .darkThemeBtn {
   transform: scale(1.12);
 }
 
+/* FOOTER LINKS FIX */
+.footer .nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  padding: 0;
+}
+
+.footer .nav-links li {
+  text-align: right;
+}
+
+.footer .nav-links a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.footer .nav-links a:hover {
+  color: var(--color-secondary);
+}
