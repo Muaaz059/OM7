@@ -1,3 +1,4 @@
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -22,7 +23,6 @@ nav {
     justify-content: center;
     z-index: 100;
 }
-
 
 nav ul {
     list-style: none;
@@ -62,17 +62,16 @@ nav a {
     gap: 3rem;
     align-items: stretch;
     margin-bottom: 6rem;
-    flex-wrap: wrap;
 }
 
-/* عكس الاتجاه للخدمة الثانية */
+/* Reverse layout */
 .service-section.reverse {
     flex-direction: row-reverse;
 }
 
 /* TEXT */
 .service-text {
-    flex: 1.2; /* ✅ كان خطأ (1,2) */
+    flex: 1.2;
     background: rgba(255,255,255,0.25);
     backdrop-filter: blur(12px);
     border-radius: 30px;
@@ -98,10 +97,11 @@ nav a {
     margin-bottom: 0.6rem;
 }
 
-/* IMAGES */
+/* IMAGES – PC */
 .service-images {
     flex: 1;
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
 }
 
@@ -139,21 +139,21 @@ nav a {
     font-weight: 500;
 }
 
-/* كود الصور – كمبيوتر */
-.service-images img {
-    width: 100%;
-    height: 320px;
-    object-fit: cover;
-    border-radius: 25px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-}
-
-/* آخر الملف – جوال */
+/* =========================
+   MOBILE (FINAL & CLEAN)
+   ========================= */
 @media (max-width: 768px) {
-  .service-images img {
-    height: auto !important;
-    max-height: none !important;
-    object-fit: contain !important;
-  }
-}
 
+    .service-section {
+        flex-direction: column;
+    }
+
+    .service-images {
+        grid-template-columns: 1fr;
+    }
+
+    .service-images img {
+        height: auto;
+        object-fit: contain;
+    }
+}
