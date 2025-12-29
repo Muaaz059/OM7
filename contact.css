@@ -265,3 +265,11 @@ form button:hover {
   right: 20px;
   z-index: 999;
 }
+
+@media (max-width: 768px) {
+  .service-images img,
+  .project img {
+    height: auto;
+    object-fit: contain;
+  }
+}
