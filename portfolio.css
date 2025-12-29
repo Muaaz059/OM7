@@ -1,0 +1,104 @@
+/* =========================
+   PORTFOLIO PAGE (RTL)
+========================= */
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6rem 2rem 2rem;
+}
+
+/* عنوان الصفحة */
+.portfolio h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+/* المشاريع */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+/* كرت المشروع */
+.project {
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-8px);
+}
+
+.project img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+}
+
+.project h3 {
+  font-size: 1.2rem;
+}
+
+/* Testimonials */
+.testimonials {
+  margin-top: 6rem;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.testimonial {
+  max-width: 600px;
+  margin: auto;
+  background: rgba(255,255,255,0.25);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* =========================
+   PORTFOLIO – DARK MODE
+========================= */
+
+body.dark .portfolio h1,
+body.dark .testimonials h2 {
+  color: #ffffff;
+}
+
+/* كروت المشاريع */
+body.dark .project {
+  background: rgba(0, 0, 0, 0.55);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+body.dark .project h3 {
+  color: #f1f1f1;
+}
+
+/* الصور */
+body.dark .project img {
+  filter: brightness(0.9) contrast(1.05);
+}
+
+/* Testimonials */
+body.dark .testimonial {
+  background: rgba(0, 0, 0, 0.55);
+  color: #f1f1f1;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+}
+
+/* تحسين عام */
+body.dark main {
+  background: transparent;
+}
