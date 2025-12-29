@@ -258,3 +258,10 @@ form button:hover {
   backdrop-filter: blur(10px);
   font-weight: 500;
 }
+
+.whatsapp-chat {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
