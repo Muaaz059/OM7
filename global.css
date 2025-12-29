@@ -395,3 +395,15 @@ html[dir="rtl"] .darkThemeBtn {
 .footer .nav-links a:hover {
   color: var(--color-secondary);
 }
+
+@media (max-width: 768px) {
+  .whatsapp-float {
+    bottom: 120px; /* فقط هذا */
+  }
+}
+ @media (max-width: 768px) {
+  footer {
+    position: relative;
+    z-index: 2;
+  }
+}
