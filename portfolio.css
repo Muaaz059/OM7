@@ -102,3 +102,11 @@ body.dark .testimonial {
 body.dark main {
   background: transparent;
 }
+
+@media (max-width: 768px) {
+  .service-images img,
+  .project img {
+    height: auto;
+    object-fit: contain;
+  }
+}
