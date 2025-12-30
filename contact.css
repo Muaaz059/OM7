@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* BODY */
+body {
+    min-height: 100vh;
+}
+
+/* NAV */
+nav {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    position: fixed;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 2rem;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+    z-index: 100;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #000;
+    bottom: -4px;
+    left: 50%;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* CONTACT SECTION */
+.contact {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 8rem;
+}
+
+.contact-box {
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(14px);
+    border-radius: 30px;
+    padding: 3rem;
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+}
+
+.contact-box h1 {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+}
+
+.contact-box p {
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+    color: #222;
+}
+
+/* SOCIAL LINKS */
+.social-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.social {
+    padding: 1.2rem;
+    border-radius: 25px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.social:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.social.whatsapp {
+    background: #25D366;
+}
+
+.social.instagram {
+    background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af);
+}
+
+.social.facebook {
+    background: #1877F2;
+}
+
+.social.tiktok {
+    background: #000;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .social-links {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-box {
+        margin: 0 1rem;
+        padding: 2rem;
+    }
+}
+/* FORM */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+    margin-top: 2.5rem;
+}
+
+/* INPUTS + TEXTAREA */
+form input,
+form textarea {
+    width: 100%;
+    padding: 1.1rem 1.3rem;
+    border-radius: 25px;
+    border: 1px solid rgba(255,255,255,0.4);
+    background: rgba(255,255,255,0.35);
+    backdrop-filter: blur(8px);
+    font-size: 1rem;
+    color: #000;
+    outline: none;
+    box-shadow: inset 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* PLACEHOLDER */
+form input::placeholder,
+form textarea::placeholder {
+    color: #444;
+}
+
+/* TEXTAREA */
+form textarea {
+    min-height: 160px;
+    resize: none;
+}
+
+/* FOCUS EFFECT */
+form input:focus,
+form textarea:focus {
+    border-color: #000;
+    background: rgba(255,255,255,0.5);
+}
+
+/* SEND BUTTON */
+form button {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 30px;
+    border: none;
+    font-size: 1.05rem;
+    font-weight: 600;
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* BUTTON HOVER */
+form button:hover {
+    background: #333;
+    transform: translateY(-2px);
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    form input,
+    form textarea {
+        font-size: 0.95rem;
+    }
+}
+/* SOCIAL MEDIA UNDER FORM */
+.contact-social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2.5rem;
+}
+
+.contact-social .social {
+    padding: 0.9rem 2rem;
+    border-radius: 30px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.contact-social .social:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+.contact-social .whatsapp {
+    background: #25D366;
+}
+
+.contact-social .instagram {
+    background: linear-gradient(45deg,#f58529,#dd2a7b,#8134af);
+}
+
+.contact-social .tiktok {
+    background: #000;
+}
+
+.contact-social .facebook {
+    background: #1877F2;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .contact-social {
+        flex-direction: column;
+    }
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem;
+  margin-top: 5rem;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+  font-weight: 500;
+}
+
+.whatsapp-chat {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
