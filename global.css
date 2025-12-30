@@ -1,6 +1,6 @@
 .site-logo {
   position: fixed;
-  top: 0,9rem;
+  top: 0.9rem;
   left: 30px;
   z-index: 500;
 }
@@ -541,3 +541,4 @@ html[dir="rtl"] .nav-links {
 html[dir="rtl"] .nav-links li {
   margin: 0 1rem;
 }
+
