@@ -1,8 +1,8 @@
 .site-logo {
   position: fixed;
-  top: 2 rem;
+  top: 0,9rem;
   left: 30px;
-  z-index: 1000;
+  z-index: 500;
 }
 
 .site-logo .logo {
@@ -10,6 +10,13 @@
   width: auto;
   transition: 0.3s ease;
 }
+
+html[dir="rtl"] nav {
+  left: auto;
+  right: 50%;
+  transform: translateX(50%);
+}
+
 
 /* Dark mode */
 body.dark .site-logo .logo {
@@ -90,10 +97,10 @@ body.dark .footer {
    3. NAVBAR
 ================================================== */
 nav {
-  position: fixed;
-  top: 2rem;
+  position: relative;
   left: 50%;
   transform: translateX(-50%);
+  top: 2rem;
   width: 80%;
   padding: 1rem;
   transition: box-shadow 0.3s ease;
@@ -102,7 +109,7 @@ nav {
   border-radius: var(--radius-lg);
   border: 1px solid rgba(255,255,255,0.5);
   box-shadow: 0 8px 32px rgba(0,0,0,0.25);
-  z-index: 100;
+  z-index: 1000;
 }
 
 /* اللينكات في المنتصف */
@@ -111,6 +118,7 @@ nav {
     display: flex;
     justify-content: center;
     gap: 3rem;
+  
 }
 
 nav a {
@@ -268,24 +276,8 @@ body.dark .btn.primary {
   opacity: 0;
 }
 
-/* زر الدارك داخل النافبار تمامًا */
-.darkThemeBtn {
-  position: absolute;
-  left: 24px;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  align-items: center;
-}
-
 .darkThemeBtn label:hover {
   box-shadow: 0 0 12px rgba(77, 163, 255, 0.6);
-}
-
-/* RTL */
-html[dir="rtl"] .darkThemeBtn {
-  left: 24px;
-  right: auto;
 }
 
 @media (max-width: 768px) {
@@ -333,9 +325,21 @@ html[dir="rtl"] .darkThemeBtn {
   }
 
   .nav-links li {
-    text-align: center;
+    text-align: center; 
   }
 }
+
+/* DARK MODE BUTTON – FIXED POSITION */
+.darkThemeBtn {
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+}
+
+
 
 .whatsapp-float {
   position: fixed;
@@ -427,4 +431,113 @@ html[dir="rtl"] .darkThemeBtn {
     transform: none !important;
     position: static !important;
   }
+}
+/* =========================
+   LANGUAGE BUTTON - SAME SITE STYLE
+========================= */
+
+.lang-btn-wrapper {
+  position: relative;
+}
+
+/* زر اللغة الرئيسي */
+#langBtn {
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 14px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#langBtn:hover {
+  background: var(--color-secondary);
+  transform: translateY(-1px);
+}
+
+/* القائمة المنسدلة */
+.lang-menu {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background: var(--color-bg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  min-width: 160px;
+  display: none;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+/* عند الفتح */
+.lang-menu.show {
+  display: block;
+}
+
+/* أزرار اللغات */
+.lang-menu button {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: var(--color-text);
+  padding: 12px 16px;
+  text-align: right;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+/* Hover */
+.lang-menu button:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.nav-actions {
+  position: absolute;
+  top: 50%;
+  right: 20px; /* أقصى اليمين */
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+/* =========================
+   Dark Mode – Language Button Fix
+========================= */
+
+body.dark #langBtn {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+body.dark .lang-menu button {
+  color: #fff;
+}
+/* RTL (عربي) */
+html[dir="rtl"] nav .nav-links {
+  flex-direction: row-reverse;
+}
+
+/* LTR (ألماني / إنجليزي) */
+html[dir="ltr"] nav .nav-links {
+  flex-direction: row;
+}
+/* NAVBAR RTL FIX */
+html[dir="rtl"] nav {
+  direction: rtl;
+}
+
+html[dir="rtl"] .nav-links {
+  margin: 0 auto;
+  padding: 0;
+  justify-content: center;
+}
+
+html[dir="rtl"] .nav-links li {
+  margin: 0 1rem;
 }
