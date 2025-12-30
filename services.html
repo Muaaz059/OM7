@@ -25,11 +25,11 @@
     <!-- NAV -->
     <nav>
         <ul class="nav-links">
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="services.html" class="active">Services</a></li>
-            <li><a href="index.html">Home</a></li>
+<li><a href="index.html" class="active" data-i18n="nav_home">Home</a></li>
+<li><a href="services.html" data-i18n="nav_services">Services</a></li>
+<li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+<li><a href="about.html" data-i18n="nav_about">About</a></li>
+<li><a href="portfolio.html" data-i18n="nav_portfolio">Portfolio</a></li>
         </ul>
 
         <div class="darkThemeBtn">
@@ -53,13 +53,35 @@
         </div>
 
         <button class="menu-toggle">☰</button>
+
+<div class="nav-actions">
+
+    <!-- زر الدارك مود -->
+    <div class="darkThemeBtn">
+        <!-- نفس كود الدارك مود عندك بدون تغيير -->
+    </div>
+
+    <!-- زر اللغة -->
+    <div class="lang-btn-wrapper">
+        <button id="langBtn">🌐 اللغة</button>
+
+        <div id="langMenu" class="lang-menu">
+            <button data-lang="ar">العربية</button>
+            <button data-lang="de">Deutsch</button>
+            <button data-lang="en">English</button>
+        </div>
+    </div>
+
+</div>
+
+
     </nav>
 
     <!-- SERVICES -->
     <section class="services-section reveal">
 
-        <h1>خدماتنا</h1>
-        <p class="subtitle">
+        <h1 data-i18n="services_title">خدماتنا</h1>
+        <p class="subtitle" data-i18n="services_desc">
             نقدّم حلول ويب احترافية تساعدك على النمو والنجاح على الإنترنت
         </p>
 
@@ -69,33 +91,38 @@
             <div class="service-card">
                 <img src="https://uicookies.com/wp-content/uploads/2018/06/interbizz-free-web-design-templates.jpg"
                     alt="">
-                <h3>تصميم واجهة الموقع</h3>
-                <p>
+                <h3 data-i18n="service_design">تصميم واجهة الموقع</h3>
+                <p data-i18n="service_design_desc">
                     تصميم واجهات عصرية وجذابة، متوافقة مع جميع الأجهزة
                     وتركّز على تجربة المستخدم.
                 </p>
-                <a href="contact.html" class="btn primary">اطلب الخدمة</a>
+                <a href="contact.html" class="btn primary" data-i18n="order_service">
+                    اطلب الخدمة
+                </a>
             </div>
 
             <!-- CARD 2 -->
             <div class="service-card">
                 <img src="https://blog.zegocloud.com/wp-content/uploads/2024/02/landing-page-frontend-project-1024x576.jpg"
                     alt="">
-                <h3>موقع متكامل</h3>
-                <p>
+                <h3 data-i18n="service_full">موقع متكامل</h3>
+                <p data-i18n="service_full_desc">
                     تطوير موقع كامل من التصميم إلى الإطلاق،
                     جاهز للاستخدام ويخدم أهدافك التجارية.
                 </p>
-                <a href="contact.html" class="btn primary">اطلب الموقع</a>
+
+                <a href="contact.html" class="btn primary" data-i18n="order_website">
+                    اطلب الموقع
+                </a>
             </div>
 
             <!-- CARD 3 -->
             <div class="service-card">
                 <img src="https://uicookies.com/wp-content/uploads/2020/12/Bootstrap-Footer-V16.jpg" alt="">
-                <h3>الدعم والتطوير</h3>
-                <p>
-                    صيانة، تحسين الأداء، ودعم فني مستمر بعد تسليم الموقع.
-                </p>
+                <h3 data-i18n="service_support">الدعم والتطوير</h3>
+            <p data-i18n="service_support_desc">
+                صيانة، تحسين الأداء، ودعم فني مستمر بعد تسليم الموقع.
+            </p>
                 <a href="contact.html" class="btn primary">تواصل معنا</a>
             </div>
 
