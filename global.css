@@ -2,7 +2,7 @@
   position: fixed;
   top: 0.9rem;
   left: 30px;
-  z-index: 500;
+  z-index: 1100;
 }
 
 .site-logo .logo {
@@ -540,6 +540,26 @@ html[dir="rtl"] .nav-links {
 
 html[dir="rtl"] .nav-links li {
   margin: 0 1rem;
+}
+
+@media (max-width: 768px) {
+
+  nav {
+    position: fixed;       /* ⬅️ بدل relative */
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    z-index: 1000;
+  }
+
+  .site-logo {
+    z-index: 1100;         /* ⬅️ فوق الـ nav */
+  }
+
+  .site-logo .logo {
+    height: 40px;
+  }
 }
 
 
