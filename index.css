@@ -1,0 +1,107 @@
+
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 500;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--color-text);
+    bottom: 0;
+    left: 50%;
+    transition: all 0.3s ease;
+}
+
+a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 10rem;
+}
+
+.hero-content {
+    background: var(--color-glass);
+    backdrop-filter: blur(12px);
+    border-radius: 30px;
+    padding: 3rem;
+    max-width: 800px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.hero h1 {
+    font-size: 2.4rem;
+      color: var(--color-text);
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
+     color: var(--color-text);
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+
+.hero-content {
+    animation: fadeUp 1s ease forwards;
+}
+
+
+
+.show {
+    animation: fadeUp 0.8s ease forwards;
+}
+
+/* HOME BIG WEBSITE NAME */
+.home-title {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1rem 1.4rem;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #004ddd;              /* أزرق فاتح */
+    background: rgba(255, 255, 255, 0.45);
+    border-bottom-right-radius: 25px; /* Border Radius */
+    backdrop-filter: blur(10px);
+    z-index: 9999;
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem;
+  margin-top: 5rem;
+  background: var(--color-glass);
+  backdrop-filter: blur(10px);
+  font-weight: 500;
+}
+
