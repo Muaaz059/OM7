@@ -542,25 +542,5 @@ html[dir="rtl"] .nav-links li {
   margin: 0 1rem;
 }
 
-/* =========================
-   MOBILE FIX (LOGO + NAV)
-   ========================= */
-@media (max-width: 768px) {
 
-  nav {
-    height: 64px;          /* ارتفاع ثابت للناف */
-  }
-
-  .site-logo {
-    position: fixed;
-    top: 50%;
-    left: 1rem;
-    transform: translateY(-50%);
-    z-index: 1002;
-  }
-
-  .site-logo img {
-    height: 36px;          /* أصغر قليلًا للموبايل */
-  }
-}
 
