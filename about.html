@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<script src="main.js" defer></script>
 <body>
     <div class="site-logo">
         <img src="logo-light.png" alt="OM7 Logo" class="logo">
@@ -21,17 +20,13 @@
     💬
 </a>
 
-
-</body>
-
-</html>
-
     <nav>
         <ul class="nav-links">
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="index.html">Home</a></li
+    <li><a href="index.html" class="active" data-i18n="nav_home">Home</a></li>
+    <li><a href="services.html" data-i18n="nav_services">Services</a></li>
+    <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+    <li><a href="about.html" data-i18n="nav_about">About</a></li>
+    <li><a href="portfolio.html" data-i18n="nav_portfolio">Portfolio</a></li>
          </ul>
             <div class="darkThemeBtn">
                 <input id="darkmode-toggle" type="checkbox">
@@ -52,6 +47,28 @@
                 </label>
             </div>
             <button class="menu-toggle" aria-label="Open Menu">☰</button>
+
+    <div class="nav-actions">
+    
+        <!-- زر الدارك مود -->
+        <div class="darkThemeBtn">
+            <!-- نفس كود الدارك مود عندك بدون تغيير -->
+        </div>
+    
+        <!-- زر اللغة -->
+        <div class="lang-btn-wrapper">
+            <button id="langBtn">🌐 اللغة</button>
+    
+            <div id="langMenu" class="lang-menu">
+                <button data-lang="ar">العربية</button>
+                <button data-lang="de">Deutsch</button>
+                <button data-lang="en">English</button>
+            </div>
+        </div>
+    
+    </div>
+
+
     </nav>
 
     <section class="about">
@@ -60,56 +77,54 @@
 
                 <!-- ABOUT -->
                 <div class="about-text">
-                    <h1>من نحن</h1>
-                    <p>
-                        نحن <strong>OM7</strong>، فريق متخصص في تصميم وتطوير المواقع الإلكترونية
-                        نساعد الشركات والأفراد على بناء حضور قوي واحترافي على الإنترنت.
-                    </p>
-
-                    <p>
-                        نعمل على إنشاء مواقع حديثة، سريعة، ومتوافقة مع جميع الأجهزة
-                        مع التركيز على تجربة المستخدم والأداء العالي.
-                    </p>
+                    <h1 data-i18n="about_title">من نحن</h1>
+                <p data-i18n="about_desc_2">
+                    نعمل على إنشاء مواقع حديثة، سريعة، ومتوافقة مع جميع الأجهزة
+                    مع التركيز على تجربة المستخدم والأداء العالي.
+                </p>
                 </div>
 
                 <!-- WHAT WE DO -->
                 <div class="about-text">
-                    <h1>ماذا نقدم</h1>
-                    <p>
-                        نقدم حلول ويب متكاملة تشمل تصميم واجهات المواقع (Frontend)
-                        وتطوير مواقع كاملة (Full Stack) تلبي احتياجات عملك.
-                    </p>
+                    <h1 data-i18n="about_services_title">ماذا نقدم</h1>
+                <p data-i18n="about_services_desc_1">
+                    نقدم حلول ويب متكاملة تشمل تصميم واجهات المواقع (Frontend)
+                    وتطوير مواقع كاملة (Full Stack) تلبي احتياجات عملك.
+                </p>
 
-                    <p>
-                        نهتم بالتفاصيل، الجودة، والاحترافية لنقدّم مواقع تساعدك
-                        على جذب العملاء وزيادة المبيعات.
-                    </p>
+                <p data-i18n="about_services_desc_2">
+                    نهتم بالتفاصيل، الجودة، والاحترافية لنقدّم مواقع تساعدك
+                    على جذب العملاء وزيادة المبيعات.
+                </p>
+
                 </div>
 
                 <!-- WHY US -->
                 <div class="about-text">
-                    <h1>لماذا نحن</h1>
-                    <p>
+                    <h1 data-i18n="about_why_title">لماذا نحن</h1>
+                    <p data-i18n="about_why_desc_1">
                         نؤمن أن الموقع هو واجهة عملك الرقمية، لذلك نحرص على أن يكون
                         سريعًا، آمنًا، وسهل الاستخدام.
                     </p>
 
-                    <p>
+
+                    <p data-i18n="about_why_desc_2">
                         نلتزم بالمواعيد، نقدم دعماً بعد التسليم،
                         ونعمل دائماً على رضا العميل قبل كل شيء.
                     </p>
+
                 </div>
 
                 <!-- TEAM -->
                 <div class="about-team">
                     <div class="team-card">
                         <h3>Muaz Hamid</h3>
-                        <p>Web Developer</p>
+                        <p data-i18n="team_dev">Web Developer</p>
                     </div>
 
                     <div class="team-card">
                         <h3>Olvan Hanoun</h3>
-                        <p>Web Designer</p>
+                        <p data-i18n="team_designer">Web Designer</p>
                     </div>
                 </div>
 
@@ -129,7 +144,7 @@
             </div>
 
             <div class="footer-links">
-                <h4>روابط سريعة</h4>
+                <h4 data-i18n="footer_links">روابط سريعة</h4>
                 <ul class="nav-links">
                     <li><a href="index.html">الرئيسية</a></li>
                     <li><a href="services.html">الخدمات</a></li>
@@ -141,7 +156,7 @@
             </div>
 
             <div class="footer-contact">
-                <h4>تواصل</h4>
+                <h4 data-i18n="footer_contact">تواصل</h4>
                 <p>📧 info@om7.com</p>
                 <p>📱 +49 177 6447813</p>
             </div>
