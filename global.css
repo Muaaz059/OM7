@@ -1,6 +1,6 @@
 .site-logo {
   position: absolute;
-  top: 3rem;
+   top: 4rem
   left: 30px;
   transform: translateY(-50%);
   z-index: 1100;
@@ -562,6 +562,7 @@ html[dir="rtl"] .nav-links li {
     height: 40px;
   }
 }
+
 
 
 
