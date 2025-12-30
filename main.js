@@ -62,6 +62,13 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // ✅ إغلاق القائمة عند الضغط على أي رابط
+document.querySelectorAll(".nav-links a").forEach(link => {
+  link.addEventListener("click", () => {
+    navMenu.classList.remove("open");
+  });
+});
+
   // ===============================
   // ✅ LANGUAGE BUTTON (المكان الصحيح)
   // ===============================
@@ -318,6 +325,7 @@ function setLanguage(lang) {
 // تحميل اللغة المحفوظة عند فتح الصفحة
 const savedLang = localStorage.getItem("lang") || "ar";
 setLanguage(savedLang);
+
 
 
 
