@@ -29,11 +29,12 @@
     <!-- NAVBAR -->
     <nav>
         <ul class="nav-links">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
+<li><a href="index.html" class="active" data-i18n="nav_home">Home</a></li>
+<li><a href="services.html" data-i18n="nav_services">Services</a></li>
+<li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
+<li><a href="about.html" data-i18n="nav_about">About</a></li>
+<li><a href="portfolio.html" data-i18n="nav_portfolio">Portfolio</a></li>
+
         </ul>
 
         <div class="darkThemeBtn">
@@ -55,20 +56,52 @@
             </label>
         </div>
         <button class="menu-toggle" aria-label="Open Menu">☰</button>
+
+        <div class="nav-actions">
+        
+            <!-- زر الدارك مود -->
+            <div class="darkThemeBtn">
+                <!-- نفس كود الدارك مود عندك بدون تغيير -->
+            </div>
+        
+            <!-- زر اللغة -->
+            <div class="lang-btn-wrapper">
+                <button id="langBtn" data-i18n="lang_btn">العربية</button>
+        
+                <div id="langMenu" class="lang-menu">
+                    <button data-lang="ar">العربية</button>
+                    <button data-lang="de">Deutsch</button>
+                    <button data-lang="en">English</button>
+                </div>
+            </div>
+        
+        </div>
+
+
     </nav>
 
     <!-- HERO -->
     <header class="hero reveal">
         <div class="hero-content">
-            <h1>نصمّم ونطوّر مواقع احترافية تنمّي عملك</h1>
-            <p>
+            <h1 data-i18n="hero_title">
+                نصمّم ونطوّر مواقع احترافية تنمّي عملك
+            </h1>
+            
+            <p data-i18n="hero_desc">
                 نساعدك على بناء حضور قوي على الإنترنت من خلال مواقع سريعة،
                 متجاوبة مع جميع الأجهزة، ومهيّأة لمحركات البحث لزيادة عملائك ومبيعاتك.
             </p>
 
+
             <div class="hero-buttons">
-                <a href="services.html" class="btn primary">اطلب موقعك الآن</a>
-                <a href="contact.html" class="btn secondary">تواصل معنا</a>
+                <a href="services.html" class="btn primary" data-i18n="hero_btn_services">
+                    اطلب موقعك الآن
+                </a>
+                
+                <a href="contact.html" class="btn secondary" data-i18n="hero_btn_contact">
+                    تواصل معنا
+                </a>
+
             </div>
         </div>
     </header>
@@ -79,32 +112,32 @@
 
             <div class="footer-brand">
                 <h3>OM7</h3>
-                <p>
-                    نصمّم ونطوّر مواقع احترافية تساعدك على بناء حضور قوي
-                    على الإنترنت وزيادة عملائك.
+                 <p data-i18n="footer_desc">
+                     نصمّم ونطوّر مواقع احترافية تساعدك على بناء حضور قوي
+                     على الإنترنت وزيادة عملائك.
                 </p>
             </div>
 
             <div class="footer-links">
-                <h4>روابط سريعة</h4>
+                <h4 data-i18n="footer_links">روابط سريعة</h4>
                 <ul class="nav-links">
-                    <li><a href="index.html">الرئيسية</a></li>
-                    <li><a href="services.html">الخدمات</a></li>
-                    <li><a href="portfolio.html">أعمالنا</a></li>
-                    <li><a href="about.html">من نحن</a></li>
-                    <li><a href="contact.html">تواصل معنا</a></li>
+                    <li><a href="index.html" data-i18n="footer_home">الرئيسية</a></li>
+                    <li><a href="services.html" data-i18n="footer_services">الخدمات</a></li>
+                    <li><a href="portfolio.html" data-i18n="footer_portfolio">أعمالنا</a></li>
+                    <li><a href="about.html" data-i18n="footer_about">من نحن</a></li>
+                    <li><a href="contact.html" data-i18n="footer_contact">تواصل معنا</a></li>
                 </ul>
             </div>
 
             <div class="footer-contact">
-                <h4>تواصل</h4>
+                <h4 data-i18n="footer_contact_title">تواصل</h4>
                 <p>📧 om7webseite@.com</p>
                 <p>📱 +49 177 6447813</p>
             </div>
 
         </div>
 
-        <div class="footer-bottom">
+        <div class="footer-bottom" data-i18n="footer_rights">
             © 2025 OM7 – جميع الحقوق محفوظة
         </div>
     </footer>
