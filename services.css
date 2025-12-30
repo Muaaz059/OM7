@@ -56,70 +56,6 @@ nav a {
     margin-bottom: 5rem;
 }
 
-/* SERVICE BLOCK */
-.service-section {
-    display: flex;
-    gap: 3rem;
-    align-items: stretch;
-    margin-bottom: 6rem;
-}
-
-/* Reverse layout */
-.service-section.reverse {
-    flex-direction: row-reverse;
-}
-
-/* TEXT */
-.service-text {
-    flex: 1.2;
-    background: rgba(255,255,255,0.25);
-    backdrop-filter: blur(12px);
-    border-radius: 30px;
-    padding: 3rem;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
-}
-
-.service-text h2 {
-    margin-bottom: 1rem;
-}
-
-.service-text p {
-    line-height: 1.8;
-    margin-bottom: 1.5rem;
-}
-
-.service-text ul {
-    list-style: none;
-    margin-bottom: 2rem;
-}
-
-.service-text li {
-    margin-bottom: 0.6rem;
-}
-
-/* IMAGES – PC (الأساس) */
-.service-images {
-    flex: 1;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-}
-
-.service-images img {
-    width: 100%;
-    height: 320px;
-    object-fit: cover;
-    border-radius: 25px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-    display: block;
-}
-
-/* ✅ FULL STACK – نفس حجم الصور العلوية */
-.same-size img {
-    height: 320px;
-    object-fit: cover;
-}
-
 /* BUTTON */
 .btn.primary {
     background: #000;
@@ -150,18 +86,52 @@ nav a {
    MOBILE (نظيف وبدون تصغير)
    ========================= */
 @media (max-width: 768px) {
+  .services-section {
+    padding: 8rem 1.5rem 4rem;
+  }
 
-    .service-section {
-        flex-direction: column;
-    }
+  .service-card {
+    padding: 2rem;
+  }
 
-    .service-images {
-        grid-template-columns: 1fr;
-    }
+  .service-card img {
+    height: 200px;
+  }
+}
 
-    .service-images img,
-    .same-size img {
-        height: 260px;       /* نفس الحجم للجميع */
-        object-fit: cover;   /* لا تصغير */
-    }
+
+.services-section {
+  width: 100%;
+  padding: 10rem 3rem 5rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  max-width: 1400px;
+  margin: auto;
+}
+.service-card {
+  background: rgba(255,255,255,0.35);
+  backdrop-filter: blur(14px);
+  border-radius: 30px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+}
+.service-card h3,
+.service-card p {
+  writing-mode: horizontal-tb;
+  text-orientation: mixed;
+  width: 100%;
+}
+.service-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 20px;
 }
