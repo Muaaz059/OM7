@@ -1,13 +1,14 @@
 .site-logo {
   position: absolute;
-   top: 2rem
+  top: 4rem;
   left: 30px;
   transform: translateY(-50%);
   z-index: 1100;
 }
 
+
 .site-logo .logo {
-  height: 10EXZ0px;
+  height: 120px;
   width: auto;
   transition: 0.3s ease;
 }
@@ -542,32 +543,3 @@ html[dir="rtl"] .nav-links {
 html[dir="rtl"] .nav-links li {
   margin: 0 1rem;
 }
-
-@media (max-width: 768px) {
-
-  nav {
-    position: fixed;       /* ⬅️ بدل relative */
-    top: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 95%;
-    z-index: 1000;
-  }
-
-  .site-logo {
-    z-index: 1100;         /* ⬅️ فوق الـ nav */
-  }
-
-  .site-logo .logo {
-    height: 40px;
-  }
-}
-
-
-
-
-
-
-
-
-
